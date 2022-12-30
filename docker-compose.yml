@@ -1,0 +1,11 @@
+---
+
+services:
+  subnetcalc:
+    image: encbladexp/subnetcalc:latest
+    build:
+      context: .
+      args:
+        ALPINE_VERSION: 3.17.0
+        SUBNETCALC_VERSION: 2.4.20
+      pull: true
