@@ -28,3 +28,12 @@ KISS
 As we have a very simple compose file, just:
 
     docker compose build
+
+## Multi Arch Build
+
+    docker buildx create --use --name subnetcalc
+    docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 \
+        -t encbladexp/subnetcalc:latest --push .
+    docker buildx rm subnetcalc
+
+The creation of an buildx builder is optional, and depends on your environment.
