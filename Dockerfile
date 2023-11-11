@@ -1,6 +1,6 @@
-ARG ALPINE_VERSION
+ARG ALPINE_VERSION=3.18.4
 FROM alpine:${ALPINE_VERSION} as build
-ARG SUBNETCALC_VERSION
+ARG SUBNETCALC_VERSION=2.4.22
 RUN apk update && \
     apk --no-cache add make cmake g++ curl geoip
 WORKDIR /
