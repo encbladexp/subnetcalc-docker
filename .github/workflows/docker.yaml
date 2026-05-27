@@ -24,4 +24,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm/v7
-          tags: encbladexp/subnetcalc:latest,encbladexp/subnetcalc:2.5.1
+          tags: encbladexp/subnetcalc:latest,encbladexp/subnetcalc:2.6.6
