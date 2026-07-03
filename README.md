@@ -1,13 +1,13 @@
 # subnetcalc for Docker
 
 This image is based on Alpine and available on
-[Dockerhub](https://hub.docker.com/r/encbladexp/subnetcalc).
+[GitHub Container Registry](https://github.com/encbladexp/subnetcalc-docker/pkgs/container/subnetcalc).
 
 ## Usage
 
 KISS
 
-    ~ docker container run --rm encbladexp/subnetcalc 10.0.0.0/8
+    ~ docker container run --rm ghcr.io/encbladexp/subnetcalc 10.0.0.0/8
     Address       = 10.0.0.0
                        00001010 . 00000000 . 00000000 . 00000000
     Network       = 10.0.0.0 / 8
@@ -33,7 +33,7 @@ As we have a very simple compose file, just:
 
     docker buildx create --use --name subnetcalc
     docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 \
-        -t encbladexp/subnetcalc:latest --push .
+        -t ghcr.io/encbladexp/subnetcalc:latest --push .
     docker buildx rm subnetcalc
 
 The creation of an buildx builder is optional, and depends on your environment.

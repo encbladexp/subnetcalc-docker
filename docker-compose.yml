@@ -2,7 +2,7 @@
 
 services:
   subnetcalc:
-    image: encbladexp/subnetcalc:latest
+    image: ghcr.io/encbladexp/subnetcalc:latest
     build:
       context: .
       pull: true
